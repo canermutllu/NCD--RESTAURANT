@@ -1,26 +1,19 @@
-import { storage, Context } from "near-sdk-as"
+import {Menu, theMenu} from "./model";
 
-// return the string 'hello world'
-export function helloWorld(): string {
-  return 'hello world'
+
+export function createMenu(meal: string, name: string, ingredient: string): Menu {
+   return Menu.createMenu(meal,name,ingredient);
 }
 
-// read the given key from account (contract) storage
-export function read(key: string): string {
-  if (storage.hasKey(key)) {
-    return `✅ Key [ ${key} ] has value [ ${storage.getString(key)!} ]`
-  } else {
-    return `🚫 Key [ ${key} ] not found in storage. ( ${storageReport()} )`
-  }
+export function updateMenu(id: u32,meal: string, name: string, ingredient: string): Menu {
+   return Menu.updateMenu(id,meal,name,ingredient)
+}  
+
+
+export function showMenuById(id: i32): Menu {
+   return theMenu.getSome(id)
 }
 
-// write the given value at the given key to account (contract) storage
-export function write(key: string, value: string): string {
-  storage.set(key, value)
-  return `✅ Data saved. ( ${storageReport()} )`
-}
-
-// private helper method used by read() and write() above
-function storageReport(): string {
-  return `storage [ ${Context.storageUsage} bytes ]`
+export function ShowMenus(): Menu[] {
+   return Menu.showMenus()
 }
