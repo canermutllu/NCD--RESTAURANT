@@ -43,8 +43,9 @@ near call $CONTRACT updateMenu '{"id":id,"meal":"<meal name>","name":"<food name
 ```
 
 Show menu by id:
+```
 near call $CONTRACT showMenuById '{"id":id}' --accountId <YOUR_TESTNET_ACCOUNT>
-
+```
 
 
 
