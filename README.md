@@ -10,7 +10,7 @@ near login
 
 Clone the repo with:
 ```
-git@github.com:canermutllu/NCD_project_restaurant.git
+git@github.com:canermutllu/NCD--RESTAURANT.git
 ```
 
 ```
