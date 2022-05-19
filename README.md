@@ -35,7 +35,7 @@ near call $CONTRACT createMenu '{"meal":"<meal name>","name":"<food name>", "ing
 Show all menus:
 
 ```
-near call $CONTRACT ShowMenus '{}' --accountId <YOUR_TESTNET_ACCOUNT>
+near call $CONTRACT ShowMenus --accountId <YOUR_TESTNET_ACCOUNT>
 ```
 Update a menu:
 ```
